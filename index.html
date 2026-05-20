@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>TNT Watches | Premium Wrist Watch Store – Ch. Sambhajinagar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #faf8f5;
+            color: #1e1b17;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* header */
+        .site-header {
+            background: #ffffff;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.03), 0 1px 2px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(2px);
+            background: rgba(255, 255, 255, 0.96);
+        }
+
+        .nav-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            gap: 1rem;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #2c3e50, #1a2a36);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .logo p {
+            font-size: 0.7rem;
+            color: #9b8e7c;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #2c3e2f;
+            transition: 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #c49a6c;
+            border-bottom: 2px solid #c49a6c;
+            padding-bottom: 4px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2c3e50;
+            color: white;
+            padding: 10px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid #2c3e50;
+            color: #2c3e50;
+        }
+        .btn-outline:hover {
+            background: #2c3e50;
+            color: white;
+        }
+        .btn:hover {
+            background: #c49a6c;
+            border-color: #c49a6c;
+            transform: translateY(-2px);
+        }
+
+        /* hero section */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2.5rem;
+            padding: 2.8rem 0 2rem;
+        }
+        .hero-content {
+            flex: 1;
+        }
+        .hero-badge {
+            background: #f0e7dd;
+            display: inline-block;
+            padding: 5px 14px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #9b6a42;
+            margin-bottom: 1rem;
+        }
+        .hero-content h2 {
+            font-size: 3rem;
+            line-height: 1.2;
+            font-weight: 800;
+            color: #1f2a2e;
+            margin-bottom: 1rem;
+        }
+        .hero-content p {
+            font-size: 1.1rem;
+            color: #5b5348;
+            margin: 1rem 0 1.5rem;
+            max-width: 500px;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+        .stat span {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #c49a6c;
+            display: block;
+        }
+        .hero-image {
+            flex: 1;
+            background: #ece3d9;
+            border-radius: 48px;
+            padding: 1.8rem;
+            text-align: center;
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.05);
+        }
+        .watch-icon {
+            font-size: 5rem;
+        }
+
+        /* sections */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #c49a6c;
+            margin-top: 6px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0 3rem;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 28px;
+            padding: 1.8rem 1rem;
+            text-align: center;
+            transition: 0.2s;
+            border: 1px solid #efebe5;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.02);
+        }
+        .feature-card:hover {
+            transform: translateY(-6px);
+            border-color: #e1cfbc;
+        }
+        .feature-icon {
+            font-size: 2.6rem;
+            margin-bottom: 0.8rem;
+        }
+        .feature-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-card {
+            background: #ffffffea;
+            border-radius: 28px;
+            padding: 1.8rem;
+            margin: 2rem 0;
+            border: 1px solid #ece2d8;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1rem;
+        }
+
+        footer {
+            background: #1c262c;
+            color: #dfd5c9;
+            padding: 2.5rem 0 1.2rem;
+            margin-top: 3.5rem;
+        }
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-col h4 {
+            color: #e9cba7;
+            margin-bottom: 1rem;
+        }
+        .footer-col a {
+            color: #cdbcab;
+            text-decoration: none;
+            display: block;
+            margin: 0.5rem 0;
+        }
+        .copyright {
+            border-top: 1px solid #3f4a4f;
+            padding-top: 1.5rem;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        .page-card {
+            background: white;
+            border-radius: 32px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            border: 1px solid #efe7df;
+        }
+        .legal-content h3 {
+            margin: 1.5rem 0 0.5rem;
+            color: #9b6a42;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 500px;
+        }
+        input, textarea {
+            padding: 12px 16px;
+            border: 1px solid #e0d4ca;
+            border-radius: 32px;
+            font-family: inherit;
+            background: #fffdfa;
+        }
+        .back-home {
+            margin-top: 1.8rem;
+        }
+        @media (max-width: 760px) {
+            .hero-content h2 { font-size: 2.2rem; }
+            .nav-links { gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-bar">
+            <div class="logo">
+                <h1>TNT WATCHES</h1>
+                <p>⌚ Timeless precision | Wrist Watch Retail Store</p>
+            </div>
+            <div class="nav-links">
+                <a href="#" data-page="home" class="active">Home</a>
+                <a href="#" data-page="contact">Contact</a>
+                <a href="#" data-page="privacy">Privacy Policy</a>
+                <a href="#" data-page="terms">Terms & Conditions</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="container">
+        <!-- HOME PAGE -->
+        <div id="home-page">
+            <div class="hero">
+                <div class="hero-content">
+                    <div class="hero-badge">📍 Since 2012 | Authentic brands</div>
+                    <h2>Your perfect timepiece <br>awaits at TNT Watches</h2>
+                    <p>Explore premium wrist watches — from classic analog to modern smart chronographs. Quality & style for every wrist.</p>
+                    <div class="hero-stats">
+                        <div class="stat"><span>500+</span> Watch Models</div>
+                        <div class="stat"><span>10+</span> Top Brands</div>
+                        <div class="stat"><span>⭐ 4.8</span> Customer rating</div>
+                    </div>
+                    <a href="#" data-page="contact" class="btn" id="heroContactBtn">📞 Visit Store / Inquiry →</a>
+                </div>
+                <div class="hero-image">
+                    <div class="watch-icon">⌚✨🕰️</div>
+                    <p style="margin-top: 12px; font-weight: 500;">Style meets accuracy</p>
+                </div>
+            </div>
+
+            <!-- features -->
+            <div>
+                <h2 class="section-title">Why TNT Watches?</h2>
+                <div class="feature-grid">
+                    <div class="feature-card"><div class="feature-icon">🔧</div><h3>Genuine Brands</h3><p>100% authentic & warranty assured</p></div>
+                    <div class="feature-card"><div class="feature-icon">🛍️</div><h3>Wide Collection</h3><p>Analog, digital, chrono & luxury</p></div>
+                    <div class="feature-card"><div class="feature-icon">🎁</div><h3>Gift Ready</h3><p>Elegant packaging & engraving options</p></div>
+                </div>
+            </div>
+
+            <!-- Address & contact block -->
+            <div class="info-card">
+                <div class="contact-detail">🏢 <strong>TNT Watches Retail Store</strong><br>103, Tapadia Circle, Besides Domino's Pizza,<br>Nirala Bazar, Ch. Sambhajinagar (Aurangabad) - 431001</div>
+                <div class="contact-detail">📧 <strong>Email:</strong> <a href="mailto:tntwatches@gmail.com" style="color:#9b6a42;">tntwatches@gmail.com</a></div>
+                <div class="contact-detail">📞 <strong>Store Helpline:</strong> <a href="tel:+919999999999" style="color:#9b6a42;">+91 98812 34567</a> (example) <br> ⏰ Mon-Sat: 11AM – 8:30PM</div>
+            </div>
+
+            <!-- extra message -->
+            <div style="background: #fef5ec; border-radius: 32px; padding: 1.5rem; text-align:center; margin-bottom: 1.5rem;">
+                <p style="font-weight:500;">✨ <strong>Special offers on festive collections</strong> — Visit our showroom near Domino's Pizza, Nirala Bazar. Walk-ins welcome!</p>
+            </div>
+        </div>
+
+        <!-- CONTACT PAGE -->
+        <div id="contact-page" style="display: none;">
+            <div class="page-card">
+                <h2>📞 Get in touch – TNT Watches</h2>
+                <p style="margin-bottom: 1.2rem;">We're here to help you find the perfect watch. Reach out for inquiries, repairs, or bulk orders.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+                    <div style="flex: 1;">
+                        <h3>📍 Store Location</h3>
+                        <p><strong>TNT Watches</strong><br>103, Tapadia Circle, Besides Domino's Pizza,<br>Nirala Bazar, Ch. Sambhajinagar (Aurangabad) - 431001</p>
+                        <h3>📧 Email</h3>
+                        <p><a href="mailto:tntwatches@gmail.com">tntwatches@gmail.com</a></p>
+                        <h3>📞 Phone / WhatsApp</h3>
+                        <p>+91 98812 34567 (Store Manager)<br>+91 99703 22118 (Support)</p>
+                        <h3>🕒 Opening Hours</h3>
+                        <p>Monday – Saturday: 11:00 AM – 8:30 PM<br>Sunday: 12:00 PM – 6:00 PM (limited staff)</p>
+                        <h3>🛠️ Services</h3>
+                        <p>Battery replacement, strap adjustment, watch servicing & warranty claims.</p>
+                    </div>
+                    <div style="flex: 1;">
+                        <h3>Quick Inquiry</h3>
+                        <form class="contact-form" id="contactForm">
+                            <input type="text" placeholder="Your name" id="contactName" required>
+                            <input type="email" placeholder="Email address" id="contactEmail" required>
+                            <input type="tel" placeholder="Phone number" id="contactPhone">
+                            <textarea rows="3" placeholder="I'm interested in ... (watch model / brand / service)"></textarea>
+                            <button type="submit" class="btn">Send Message ⌚</button>
+                            <p style="font-size: 0.7rem; margin-top: 6px;">We'll reply within 24 hours.</p>
+                        </form>
+                    </div>
+                </div>
+                <a href="#" data-page="home" class="back-home btn-outline btn">← Back to Home</a>
+            </div>
+        </div>
+
+        <!-- PRIVACY POLICY -->
+        <div id="privacy-page" style="display: none;">
+            <div class="page-card legal-content">
+                <h2>🔒 Privacy Policy – TNT Watches</h2>
+                <p><strong>Last Updated:</strong> 2026 | TNT Watches (Wrist Watch Retail Store, Aurangabad)</p>
+                <p>Your privacy is important to us. This policy describes how TNT Watches collects, uses, and protects your personal information when you visit our store or contact us via email, phone, or website.</p>
+                <h3>1. Information We Collect</h3>
+                <p>We may collect personal data such as your name, email address, phone number, and purchase history when you buy a watch, request service, or fill out inquiry forms.</p>
+                <h3>2. How We Use Information</h3>
+                <p>To process orders, provide after-sales support (warranty, repairs), send promotional offers (only with consent), and improve customer experience. We never sell or rent your data.</p>
+                <h3>3. Data Security</h3>
+                <p>We store data securely and restrict access to authorized staff only. Payment transactions are processed through secure partners.</p>
+                <h3>4. Third-Party Sharing</h3>
+                <p>We may share delivery details with courier partners for shipping watches. Legal disclosure only if required by law.</p>
+                <h3>5. Your Rights</h3>
+                <p>You may request access, correction, or deletion of your data by emailing <strong>tntwatches@gmail.com</strong>.</p>
+                <h3>6. Cookies & Tracking</h3>
+                <p>Our website uses minimal cookies for functionality. No third-party tracking.</p>
+                <h3>7. Contact for Privacy</h3>
+                <p>TNT Watches, 103 Tapadia Circle, Ch. Sambhajinagar – 431001. Email: tntwatches@gmail.com</p>
+                <a href="#" data-page="home" class="back-home btn-outline btn">← Back to Home</a>
+            </div>
+        </div>
+
+        <!-- TERMS AND CONDITIONS -->
+        <div id="terms-page" style="display: none;">
+            <div class="page-card legal-content">
+                <h2>📜 Terms & Conditions – TNT Watches</h2>
+                <p><strong>Effective Date:</strong> 2026 | TNT Watches, Aurangabad</p>
+                <h3>1. General</h3>
+                <p>By purchasing from TNT Watches or using our contact services, you agree to these terms. All watches sold are subject to manufacturer warranty unless stated otherwise.</p>
+                <h3>2. Product Availability & Pricing</h3>
+                <p>We strive for accurate pricing, but errors may occur. We reserve the right to cancel orders due to pricing inaccuracies or stock unavailability.</p>
+                <h3>3. Warranty & Returns</h3>
+                <p>Watches come with 1-year manufacturer warranty on movement (excluding straps, battery, accidental damage). Returns accepted within 7 days if unworn with original packaging. Defective products must be reported within 48 hours.</p>
+                <h3>4. Repairs & Servicing</h3>
+                <p>We offer paid repair services for any brand. Turnaround time approx 7-14 days. Estimate provided before repair.</p>
+                <h3>5. Liability</h3>
+                <p>TNT Watches is not liable for indirect loss or damage due to watch malfunction beyond replacement/repair value. For vintage items, condition is as stated at sale.</p>
+                <h3>6. Governing Law</h3>
+                <p>All matters subject to jurisdiction of Courts at Ch. Sambhajinagar (Aurangabad), Maharashtra.</p>
+                <h3>7. Contact for Issues</h3>
+                <p>Email: tntwatches@gmail.com | Store address: 103 Tapadia Circle, Nirala Bazar.</p>
+                <a href="#" data-page="home" class="back-home btn-outline btn">← Back to Home</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>TNT Watches</h4>
+                    <p>Wrist Watch Retail Store<br>Authentic | Trusted | Since 2012<br>📍 Aurangabad (Ch. Sambhajinagar)</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="#" data-page="home">Home</a>
+                    <a href="#" data-page="contact">Contact</a>
+                    <a href="#" data-page="privacy">Privacy Policy</a>
+                    <a href="#" data-page="terms">Terms & Conditions</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <a href="mailto:tntwatches@gmail.com">✉️ tntwatches@gmail.com</a>
+                    <p>📞 +91 98812 34567</p>
+                    <p>103, Tapadia Circle, Near Domino's, Nirala Bazar</p>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2026 TNT Watches – Wrist Watch Retail Store | All rights reserved. | Designed for watch lovers
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Page management
+        const pages = {
+            home: document.getElementById('home-page'),
+            contact: document.getElementById('contact-page'),
+            privacy: document.getElementById('privacy-page'),
+            terms: document.getElementById('terms-page')
+        };
+
+        function showPage(pageId) {
+            Object.values(pages).forEach(page => {
+                if (page) page.style.display = 'none';
+            });
+            if (pages[pageId]) pages[pageId].style.display = 'block';
+            else pages.home.style.display = 'block';
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                const linkPage = link.getAttribute('data-page');
+                if (linkPage === pageId) link.classList.add('active');
+                else link.classList.remove('active');
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // attach global listener for dynamic routing (any element with data-page)
+        document.addEventListener('click', (e) => {
+            const targetElem = e.target.closest('[data-page]');
+            if (targetElem && targetElem.getAttribute('data-page')) {
+                e.preventDefault();
+                const pageName = targetElem.getAttribute('data-page');
+                if (pages[pageName]) showPage(pageName);
+                else if (pageName === 'home') showPage('home');
+            }
+        });
+
+        // contact form handling
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('contactName')?.value || 'customer';
+                alert(`✨ Thank you ${name}! TNT Watches team will get back to you shortly at ${document.getElementById('contactEmail')?.value}. Visit our store for exclusive collections.`);
+                contactForm.reset();
+            });
+        }
+
+        const heroBtn = document.getElementById('heroContactBtn');
+        if (heroBtn) {
+            heroBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage('contact');
+            });
+        }
+
+        // start with homepage
+        showPage('home');
+    </script>
+</body>
+</html>
